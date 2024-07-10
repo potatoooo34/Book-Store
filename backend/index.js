@@ -5,8 +5,19 @@ import { PORT, mongodburl } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from "./models/bookmodel.js";
 import booksRoute from "./routes/booksRoute.js";
+import cors from "cors";
+
 
 const app = express();
+
+app.use(
+    cors({
+        origin : 'http://localhost:3000',
+        methods :['GET' , 'POST' , 'PUT' , 'DELETE'],
+        allowedHeaders :['Content-Type'],
+    })
+);
+
 
 app.use(express.json());
 app.get('/'  , (request , response) => {
