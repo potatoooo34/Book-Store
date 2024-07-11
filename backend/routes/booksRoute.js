@@ -1,5 +1,5 @@
 import express from 'express';
-import { Book } from "../models/bookmodel.js";
+import {Book} from "../models/bookmodel.js";
 const router = express.Router();
 
 router.post('/' , async(request , response) =>{
