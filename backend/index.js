@@ -1,12 +1,13 @@
 import dotenv from 'dotenv';
 import express from "express";
-import { PORT } from "./config.js";
+//import { PORT } from "./config.js";
 import mongoose from "mongoose";
 
 import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 
 dotenv.config();
+const PORT = process.end.PORT || 5555;
 const app = express();
 app.use(cors());
 
