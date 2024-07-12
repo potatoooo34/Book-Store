@@ -1,5 +1,3 @@
-
-
 import express from "express";
 import { PORT, mongodburl } from "./config.js";
 import mongoose from "mongoose";
@@ -20,6 +18,7 @@ app.use(cors());
 
 
 app.use(express.json());
+
 app.get('/'  , (request , response) => {
     console.log(request);
     return response.status(234).send("Welcome to hi");
